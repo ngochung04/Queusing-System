@@ -1,0 +1,116 @@
+@import '../../scss/color';
+
+.app__table {
+  width: 100%;
+  height: fit-content;
+}
+
+table {
+  height: inherit;
+  width: inherit;
+  border-collapse: collapse;
+  //   border: solid 1px rgba($color: $orange, $alpha: 0.2);
+
+  thead {
+    height: 49px;
+    width: inherit;
+    tr {
+      th {
+        background-color: $orange;
+        color: $background;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+
+        &:first-child {
+          border-radius: 15px 0 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 15px 0 0;
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid #ffe3cd;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      height: 49px;
+      td {
+        padding-left: 8px;
+        font-family: Nunito;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+
+        .row {
+          height: inherit;
+          width: inherit;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 8px;
+        }
+
+        .status-dot {
+          height: 8px;
+          width: 8px;
+          border-radius: 50%;
+        }
+
+        .active {
+          background-color: $green;
+        }
+        .inactive {
+          background-color: $red;
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid #ffe3cd;
+        }
+      }
+
+      &:nth-child(odd) {
+        background-color: $background;
+      }
+      &:nth-child(even) {
+        background-color: rgba($color: $orange, $alpha: 0.1);
+      }
+
+      &:last-child {
+        td {
+          &:first-child {
+            border-radius: 0 0 0 15px;
+          }
+
+          &:last-child {
+            border-radius: 0 0 15px 0;
+          }
+        }
+      }
+
+      &:only-child {
+        &:first-child {
+          border-radius: 0 0 0 15px;
+        }
+
+        &:last-child {
+          border-radius: 0 0 15px 0;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  margin: 20px 0px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-end;
+}

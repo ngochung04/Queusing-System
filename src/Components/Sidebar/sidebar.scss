@@ -1,0 +1,135 @@
+@import '../../scss/color';
+
+.app__sidebar {
+  height: 100vh;
+  width: 100%;
+  max-width: 200px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
+
+  &__logo {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  &__items-container {
+    height: fit-content;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    .menu-item {
+      height: 60px;
+      width: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: transparent;
+      padding: 10px;
+      box-sizing: border-box;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color: $orange, $alpha: 0.2);
+        svg {
+          path {
+            stroke: $orange;
+          }
+        }
+      }
+
+      &__icon {
+        height: inherit;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .selected {
+      background-color: rgba($color: $orange, $alpha: 1);
+      color: $background;
+      svg {
+        path {
+          stroke: $background;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color: $orange, $alpha: 1);
+        svg {
+          path {
+            stroke: $background;
+          }
+        }
+      }
+    }
+  }
+
+  &__sign-out {
+    margin-top: auto;
+    height: 60px;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 90%;
+      outline: none;
+      background-color: rgba($color: $orange, $alpha: 0.2);
+
+      border-color: transparent;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 10px 10px;
+      border-radius: 7.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+
+      &:hover {
+        background-color: rgba($color: $orange, $alpha: 1);
+        span {
+          height: inherit;
+          display: flex;
+          align-items: center;
+          color: $background;
+
+          svg {
+            path {
+              stroke: $background;
+            }
+          }
+        }
+      }
+
+      span {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        color: $orange;
+        svg {
+          path {
+            stroke: rgba($color: $orange, $alpha: 1);
+          }
+        }
+      }
+    }
+  }
+}

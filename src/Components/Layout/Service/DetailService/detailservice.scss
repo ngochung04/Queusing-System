@@ -1,0 +1,123 @@
+@import '../../../../scss/color';
+.app__layout-service__detail-service {
+  height: 1000px;
+  width: 100%;
+  padding-right: 60px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.title {
+  height: 36px;
+  width: 172px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  color: $orange;
+  padding-top: 25px;
+}
+
+.app__layout-service__detail-service__container {
+  height: fit-content;
+  min-height: 550px;
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-sizing: border-box;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+
+  .row {
+    height: fit-content;
+    padding: 8px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    gap: 20px;
+  }
+  .service-detail {
+    height: 100%;
+    min-height: inherit;
+    width: 370px;
+    min-width: 370px;
+    background-color: $background;
+    border-radius: inherit;
+    padding: 16px 24px;
+    box-sizing: border-box;
+
+    .form-label {
+      height: 30px;
+      width: 165px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 30px;
+      color: #ff9138;
+    }
+
+    .flex-1 {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .flex-2 {
+      flex: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  .service-queue {
+    height: 100%;
+    min-height: inherit;
+    width: 100%;
+    background-color: $background;
+    border-radius: inherit;
+    padding: 16px 24px;
+    box-sizing: border-box;
+  }
+}
+
+.app__layout-service__add-service-btn {
+  position: fixed;
+  height: 94px;
+  width: 80px;
+  right: 0;
+  top: 244px;
+  background-color: rgba($color: $orange, $alpha: 0.2);
+  border-radius: 7.5px 0 0 7.5px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color: $orange, $alpha: 0.7);
+    span {
+      color: $background;
+    }
+  }
+
+  span {
+    width: inherit;
+    height: fit-content;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $orange;
+  }
+}

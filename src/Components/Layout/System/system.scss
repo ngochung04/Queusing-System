@@ -1,0 +1,17 @@
+@import '../../../scss/color';
+
+.app__layout-system {
+  flex: 1;
+  width: 100%;
+  height: inherit !important;
+  background-color: $gray;
+  position: relative;
+
+  &__content {
+    height: inherit !important;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 90px;
+    padding: 0 30px;
+  }
+}

@@ -1,0 +1,136 @@
+@import '../../../../scss/color';
+
+.new-service {
+    width: 100%;
+    height: 1000px;
+
+    &__tittle {
+        height: 36px;
+        width: 172px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        color: $orange;
+        padding: 25px 0 0 10px;
+    }
+
+    &__container {
+        height: fit-content;
+        min-height: 550px;
+        width: 100%;
+        padding: 16px 24px;
+        border-radius: 16px;
+        background-color: $background;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        box-sizing: border-box;
+
+        .information {
+            .form-label {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 30px;
+                color: $orange;
+                padding: 16px 0 12px 0px;
+            }
+
+            .row {
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                flex-direction: row;
+
+                .col {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 137px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    gap: 10px;
+                    box-sizing: border-box;
+                    background: #ffffff;
+                    border: 1.5px solid #d4d4d7;
+                    border-radius: 8px;
+                    resize: none;
+                }
+
+                .flex-1 {
+                    flex: 1;
+                }
+            }
+        }
+
+        .regulation {
+            .form-label {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 30px;
+                color: $orange;
+                padding: 16px 0 22px 0;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-bottom: 36px;
+                gap: 8px;
+            }
+
+            .checkbox {
+                width: 20px;
+                height: 20px;
+                padding-top: 10px;
+
+            }
+
+            label {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+            }
+
+            input {
+                text-align: center;
+            }
+
+            .input-text {
+                width: 61px;
+                height: 44px;
+                border: 1.5px solid #D4D4D7;
+                border-radius: 8px;
+
+                &:first-child {
+                    margin: 0 12px 0 27px;
+                }
+
+                &:last-child {
+                    margin-left: 12px;
+                }
+
+            }
+            .notification{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                color: #7E7D88;
+            }
+        }
+    }
+    .new-service_btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+        margin-top: 24px;
+    }
+}

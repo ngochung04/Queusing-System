@@ -1,0 +1,77 @@
+@import '../../../../scss/color';
+
+.app__account-layout__account-list {
+  height: 100vh;
+  width: 100%;
+  padding: 0 60px 80px 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.app__account-layout__account-list__container {
+  height: fit-content;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__label {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $orange;
+  }
+
+  &__filters {
+    gap: 20px;
+  }
+
+  &__table {
+    height: fit-content;
+  }
+}
+
+.app__account-layout__account-list__float-btn {
+  position: fixed;
+  height: 94px;
+  width: 80px;
+  right: 0;
+  top: 244px;
+  background-color: rgba($color: $orange, $alpha: 0.2);
+  border-radius: 7.5px 0 0 7.5px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color: $orange, $alpha: 0.7);
+    span {
+      color: $background;
+    }
+  }
+
+  span {
+    width: inherit;
+    height: fit-content;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $orange;
+  }
+}

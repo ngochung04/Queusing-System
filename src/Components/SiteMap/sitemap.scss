@@ -1,0 +1,59 @@
+@import '../../scss/color';
+.sitemap {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $text;
+  z-index: 1;
+
+  .path {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__arrow {
+      margin-right: 10px;
+    }
+
+    &__name {
+    }
+
+    svg {
+      path {
+        fill: $text;
+      }
+    }
+
+    &:last-child {
+      color: $orange;
+    }
+
+    &:first-child {
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $orange;
+
+    &:first-child {
+      color: $text;
+    }
+  }
+}

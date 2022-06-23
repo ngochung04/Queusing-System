@@ -1,0 +1,19 @@
+.app__layout-dashboard,
+.app__layout-device .dashboard {
+  height: 100%;
+  width: 100%;
+  background-color: $gray;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  &__sitemap .sitemap {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $orange;
+  }
+}

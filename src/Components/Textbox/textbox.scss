@@ -1,0 +1,73 @@
+@import '../../scss/color';
+
+.app__text-box {
+  width: 100%;
+  // flex: 1;
+  height: fit-content;
+  &__label {
+    color: $text;
+    font-size: 18px;
+    line-height: 27px;
+    width: fit-content;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &__input {
+    width: inherit;
+    height: fit-content;
+    min-height: 44px;
+    position: relative;
+
+    input {
+      height: 44px !important;
+      width: inherit;
+      padding: 10px;
+      box-sizing: border-box;
+      font-family: Nunito !important;
+    font-size: 18px !important;
+      border-radius: 8px;
+      border: solid 1px $text-box-border;
+      height: 44px;
+      border: 1.5px solid #d4d4d7;
+
+      &:focus {
+        outline: rgba($color: blue, $alpha: 0.3);
+        border: 1px solid rgba($color: blue, $alpha: 0.3);
+      }
+    }
+
+    textarea {
+      height: inherit !important;
+      min-height: 160px;
+      width: inherit;
+      font-family: Nunito !important;
+      font-size: 18px !important;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: solid 1px $text-box-border;
+      height: 44px;
+      border: 1.5px solid #d4d4d7;
+
+      &:focus {
+        outline: rgba($color: blue, $alpha: 0.3);
+        border: 1px solid rgba($color: blue, $alpha: 0.3);
+      }
+    }
+
+    .input-icon {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}

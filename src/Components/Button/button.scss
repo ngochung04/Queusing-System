@@ -1,0 +1,26 @@
+@import "../../scss/color";
+
+.app__button{
+    width: 162px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+.fill {
+    color: #fff;
+    background-color: $orange;
+}
+
+.outlined {
+    color: $orange;
+    background: transparent;
+    border: solid 1px $orange;
+}
