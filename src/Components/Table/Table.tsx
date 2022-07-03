@@ -37,11 +37,16 @@ export enum ColumnLabels {
   serviceName = "Tên dịch vụ",
   serviceDescribe = "Mô tả",
   no = "STT",
+  fullNo = "Số thứ tự",
   customerName = "Tên khách hàng",
   grantTime = "Thời gian cấp",
   expireTime = "Hạn sử dụng",
   queueStatus = "Trạng thái",
+  reportStatus = "Tình trạng",
   provideBy = "Nguồn cấp",
+  roleName = "Tên vai trò",
+  quantity = "Số người dùng",
+  roleDes = "Mô tả",
 }
 
 export enum DisplayedColumns {
@@ -59,12 +64,18 @@ export enum DisplayedColumns {
   serviceUpdate = "serviceUpdate",
   serviceDetail = "serviceDetail",
   no = "no",
+  fullNo = "fullNo",
   customerName = "customerName",
   grantTime = "grantTime",
   expireTime = "expireTime",
   queueStatus = "queueStatus",
   provideBy = "provideBy",
   queueDetail = "queueDetail",
+  reportStatus = "reportStatus",
+  roleName = "roleName",
+  quantity = "quantity",
+  roleDes = "roleDes",
+  roleDetail = "roleDetail",
 }
 
 // export enum ServiceColumns {
@@ -206,6 +217,17 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                           to={
                             "/dashboard/service/modify?id=" + row.serviceUpdate
                           }
+                        >
+                          Cập nhật
+                        </Link>
+                      </td>
+                    );
+                  }
+                  if (entry[0] === DisplayedColumns.roleDetail) {
+                    return (
+                      <td>
+                        <Link
+                          to={"/dashboard/system/new_role?id=" + row.roleDetail}
                         >
                           Cập nhật
                         </Link>

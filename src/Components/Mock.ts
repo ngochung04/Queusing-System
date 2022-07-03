@@ -6,6 +6,22 @@ import {
   Service,
 } from "./Table/Table";
 
+interface IRoleRow {
+  roleName: string;
+  quantity: string;
+  roleDes: string;
+  roleDetail: string;
+}
+
+export const roleList: IRoleRow[] = [
+  {
+    roleName: "Kế toán",
+    quantity: "6",
+    roleDes: "Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu",
+    roleDetail: "",
+  },
+];
+
 export const deviceList: IDeviceRow[] = [
   {
     deviceId: "KIO_01",
