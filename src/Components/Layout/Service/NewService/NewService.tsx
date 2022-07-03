@@ -1,98 +1,124 @@
-import React from 'react';
-import { useNavigate } from 'react-router';
-import Button from '../../../Button/Button';
-import Textbox from '../../../Textbox/Textbox';
-import './newservice.scss';
+import { addDoc, collection } from "firebase/firestore";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import { db } from "../../../../firebase";
+import Button from "../../../Button/Button";
+import Textbox from "../../../Textbox/Textbox";
+import "./newservice.scss";
 
 const NewService: React.FC = () => {
   const navigate = useNavigate();
+  const [q, setQ] = useState({
+    serviceId: "",
+    serviceName: "",
+    serviceDescribe: "",
+    isActivated: false,
+    serviceDetail: false,
+    serviceUpdate: false,
+  });
+  const handleChange = (key: keyof typeof q) => (e: any) => {
+    setQ({ ...q, [key]: e });
+  };
   return (
-    <div className='new-service'>
-      <div className='new-service__tittle'>Quản lý dịch vụ</div>
+    <div className="new-service">
+      <div className="new-service__tittle">Quản lý dịch vụ</div>
 
-      <div className='new-service__container'>
-        <div className='information'>
-          <div className='row form-label'>Thông tin dịch vụ</div>
-          <div className='row'>
-            <div className='col flex-1'>
-              <Textbox label='Mã dịch vụ *' />
-              <Textbox label='Tên dịch vụ *' />
+      <div className="new-service__container">
+        <div className="information">
+          <div className="row form-label">Thông tin dịch vụ</div>
+          <div className="row">
+            <div className="col flex-1">
+              <Textbox
+                label="Mã dịch vụ *"
+                onChange={handleChange("serviceId")}
+              />
+              <Textbox
+                label="Tên dịch vụ *"
+                onChange={handleChange("serviceName")}
+              />
             </div>
-            <div className='col flex-1'>
+            <div className="col flex-1">
               Mô tả
-              <textarea />
+              <textarea
+                onChange={(e) => {
+                  setQ({ ...q, serviceDescribe: e.target.value });
+                }}
+              />
             </div>
           </div>
         </div>
-        <div className='regulation'>
-          <div className='form-label row'>Quy tắc cấp số</div>
+        <div className="regulation">
+          <div className="form-label row">Quy tắc cấp số</div>
 
-          <div className='row'>
-            <input type='checkbox' name='checkbox1' className='checkbox ' />
-            <label htmlFor='checkbox1'>
+          <div className="row">
+            <input type="checkbox" name="checkbox1" className="checkbox " />
+            <label htmlFor="checkbox1">
               Tăng từ động từ
               <input
-                type='text'
-                value={'0001'}
-                className='input-text'
+                type="text"
+                value={"0001"}
+                className="input-text"
                 readOnly
-              />{' '}
+              />{" "}
               đến
               <input
-                type='text'
-                value={'9999'}
-                className='input-text'
+                type="text"
+                value={"9999"}
+                className="input-text"
                 readOnly
               />
             </label>
             <br />
           </div>
 
-          <div className='row'>
-            <input type='checkbox' name='checkbox2' className='checkbox ' />
-            <label htmlFor='checkbox2'>
+          <div className="row">
+            <input type="checkbox" name="checkbox2" className="checkbox " />
+            <label htmlFor="checkbox2">
               Prefix
               <input
-                type='text'
-                value={'0001'}
-                className='input-text'
+                type="text"
+                value={"0001"}
+                className="input-text"
                 readOnly
               />
             </label>
             <br />
           </div>
 
-          <div className='row'>
-            <input type='checkbox' name='checkbox3' className='checkbox ' />
-            <label htmlFor='checkbox'>
+          <div className="row">
+            <input type="checkbox" name="checkbox3" className="checkbox " />
+            <label htmlFor="checkbox">
               Surfix
               <input
-                type='text'
-                value={'0001'}
-                className='input-text'
+                type="text"
+                value={"0001"}
+                className="input-text"
                 readOnly
               />
             </label>
             <br />
           </div>
 
-          <div className='row'>
-            <input type='checkbox' name='checkbox4' className='checkbox ' />
-            <label htmlFor='checkbox4'>Reset mỗi ngày</label>
+          <div className="row">
+            <input type="checkbox" name="checkbox4" className="checkbox " />
+            <label htmlFor="checkbox4">Reset mỗi ngày</label>
           </div>
-          <div className='notification'>* Là trường thông tin bắt buộc</div>
+          <div className="notification">* Là trường thông tin bắt buộc</div>
         </div>
       </div>
 
-      <div className='new-service_btn'>
+      <div className="new-service_btn">
         <Button
-          text='Hủy bỏ'
+          text="Hủy bỏ"
           isOutlined
-          onClick={() => navigate('/dashboard/service/list')}
+          onClick={() => navigate("/dashboard/service/list")}
         />
         <Button
-          text='Cập nhật'
-          onClick={() => navigate('/dashboard/service/list')}
+          text="Cập nhật"
+          onClick={() => {
+            addDoc(collection(db, "serviceList"), q);
+            navigate("/dashboard/service/list");
+          }}
         />
       </div>
     </div>

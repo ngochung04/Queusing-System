@@ -26,14 +26,14 @@ const ListDevice: React.FC = () => {
         snapshot.docs.forEach((doc: any) => {
           const x = doc.data();
           data.push({
-            deviceId: doc.id,
+            deviceId: x.deviceId,
             deviceName: x.deviceName,
             ipAddress: x.ipAddress,
             isActivated: x.isActivated,
             isConnected: x.isConnected,
             services: x.services,
-            displayDetail: x.displayDetail,
-            displayUpdate: x.displayUpdate,
+            displayDetail: doc.id,
+            displayUpdate: doc.id,
           });
           setDeviceList(data);
           setListData(data);

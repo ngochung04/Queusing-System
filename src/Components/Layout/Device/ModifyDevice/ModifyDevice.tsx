@@ -13,6 +13,7 @@ const ModifyDevice: React.FC = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useSearchParams();
   const [item, setItem] = useState({
+    deviceId: "",
     deviceName: "",
     ipAddress: "",
     isActivated: true,
@@ -44,7 +45,11 @@ const ModifyDevice: React.FC = () => {
       <div className="app__layout-device__modify-device__container">
         <div className="row form-label">Thông tin thiết bị</div>
         <div className="row">
-          <Textbox label="Mã thiết bị *" value={search.get("id") || ""} />
+          <Textbox
+            label="Mã thiết bị *"
+            value={item.deviceId}
+            onChange={handleChange("deviceId")}
+          />
           <Select label="Loại thiết bị" options={typeofDevice} />
         </div>
         <div className="row">

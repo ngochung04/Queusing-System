@@ -9,6 +9,7 @@ import "./newdevice.scss";
 const NewDevice: React.FC = () => {
   const navigate = useNavigate();
   const [item, setItem] = useState({
+    deviceId: "",
     deviceName: "",
     ipAddress: "",
     isActivated: true,
@@ -29,7 +30,7 @@ const NewDevice: React.FC = () => {
       <div className="app__layout-device__new-device__container">
         <div className="row form-label">Thông tin thiết bị</div>
         <div className="row">
-          <Textbox label="Mã thiết bị *" />
+          <Textbox label="Mã thiết bị *" onChange={handleChange("deviceId")} />
           <Textbox label="Loại thiết bị *" />
         </div>
         <div className="row">

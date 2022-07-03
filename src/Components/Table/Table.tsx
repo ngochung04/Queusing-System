@@ -190,7 +190,9 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                     return (
                       <td>
                         <Link
-                          to={"/dashboard/service/detail?id=" + row.deviceId}
+                          to={
+                            "/dashboard/service/detail?id=" + row.serviceDetail
+                          }
                         >
                           Chi tiết
                         </Link>
@@ -201,7 +203,9 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                     return (
                       <td>
                         <Link
-                          to={"/dashboard/service/modify?id=" + row.deviceId}
+                          to={
+                            "/dashboard/service/modify?id=" + row.serviceUpdate
+                          }
                         >
                           Cập nhật
                         </Link>
@@ -212,7 +216,9 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                     return (
                       <td>
                         <Link
-                          to={"/dashboard/device/detail?id=" + row.deviceId}
+                          to={
+                            "/dashboard/device/detail?id=" + row.displayDetail
+                          }
                         >
                           Chi tiết
                         </Link>
@@ -223,7 +229,9 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                     return (
                       <td>
                         <Link
-                          to={"/dashboard/device/modify?id=" + row.deviceId}
+                          to={
+                            "/dashboard/device/modify?id=" + row.displayUpdate
+                          }
                         >
                           Cập nhật
                         </Link>
@@ -254,7 +262,11 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                   if (entry[0] === DisplayedColumns.queueDetail) {
                     return (
                       <td>
-                        <Link to={"/dashboard/queue/detail"}>Chi tiết</Link>
+                        <Link
+                          to={"/dashboard/queue/detail?id=" + row.queueDetail}
+                        >
+                          Chi tiết
+                        </Link>
                       </td>
                     );
                   }
