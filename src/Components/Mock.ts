@@ -222,7 +222,7 @@ export const serviceDetailList: IServiceRow[] = [
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -230,7 +230,7 @@ export const serviceDetailList: IServiceRow[] = [
   {
     serviceId: 'KIO_02',
     serviceName: 'Kiosk2',
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: false,
     serviceUpdate: false,
@@ -238,7 +238,7 @@ export const serviceDetailList: IServiceRow[] = [
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -247,7 +247,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -256,7 +256,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -265,7 +265,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: false,
     serviceDetail: true,
     serviceUpdate: true,
@@ -274,7 +274,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -283,7 +283,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: false,
     serviceDetail: true,
     serviceUpdate: true,
@@ -292,7 +292,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -301,7 +301,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -310,7 +310,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -319,7 +319,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'KIO_02',
     serviceName: 'Kiosk2',
     isActivated: true,
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     serviceDetail: false,
     serviceUpdate: false,
   },
@@ -327,7 +327,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -336,7 +336,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -345,7 +345,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -354,7 +354,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: false,
     serviceDetail: true,
     serviceUpdate: true,
@@ -363,7 +363,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: false,
     serviceDetail: true,
     serviceUpdate: true,
@@ -372,7 +372,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -381,7 +381,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: false,
     serviceDetail: true,
     serviceUpdate: true,
@@ -390,7 +390,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
@@ -399,7 +399,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceId: 'ABC',
     serviceName: 'Kiosk',
 
-    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Mô tả dịch vụ',
     isActivated: true,
     serviceDetail: true,
     serviceUpdate: true,
